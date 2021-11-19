@@ -4,7 +4,6 @@ const getAllDogs = async () => {
   try {
     const res = await axios.get("https://dog.ceo/api/breeds/list/all");
     if (res) {
-      console.log(res);
       return res.data.message;
     }
   } catch (err) {

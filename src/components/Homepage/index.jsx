@@ -4,13 +4,15 @@ import { DogCard } from "../DogCard";
 import getAllDogs from "../../utility/Axios";
 
 export const Homepage = () => {
-  let arr = [];
   const [dogs, setDogs] = useState([]);
 
   useEffect(() => {
     getDogs();
   }, []);
-  console.log(dogs);
+
+  const dogsArr = Object.keys(dogs).map((dog, index) => {
+    return <DogCard name={dog} key={index} />;
+  });
 
   const getDogs = async () => {
     const dogs = await getAllDogs();
@@ -19,13 +21,9 @@ export const Homepage = () => {
     }
   };
 
-  for (let i = 0; i < 10; i++) {
-    arr.push(<DogCard />);
-  }
-
   return (
     <section className="homepage">
-      <div className="homepage__dogs">{arr}</div>
+      <div className="homepage__dogs">{dogsArr}</div>
     </section>
   );
 };
