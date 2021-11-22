@@ -8,7 +8,6 @@ import { Spinner } from "../UI/Spinner";
 
 export const Homepage = () => {
   const [dogs, setDogs] = useState([]);
-
   const showModal = useContext(ModalContext).visible;
 
   useEffect(() => {

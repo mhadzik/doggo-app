@@ -7,7 +7,7 @@ export const DogCard = ({ name }) => {
   const setVisibility = useContext(ModalContext).setVisibility;
   const setModalTitle = useContext(ModalContext).setTitle;
 
-  const toggle = async (event) => {
+  const toggle = (event) => {
     setVisibility();
     if (/\s/.test(event.target.innerHTML)) {
       setModalTitle(event.target.innerHTML.split(" ")[0]);
