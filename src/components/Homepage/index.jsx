@@ -4,6 +4,7 @@ import { getAllDogs } from "../../utility/API/Axios";
 import { DogCard } from "../DogCard";
 import { Modal } from "../UI/Modal";
 import { ModalContext } from "../../context/modal-context";
+import { Spinner } from "../UI/Spinner";
 
 export const Homepage = () => {
   const [dogs, setDogs] = useState([]);
@@ -24,16 +25,20 @@ export const Homepage = () => {
   });
 
   const getDogs = async () => {
-    const dogs = await getAllDogs();
-    if (dogs) {
-      setDogs(dogs);
+    const res = await getAllDogs();
+    if (res) {
+      setDogs(res);
     }
   };
 
   return (
     <section className="homepage">
       {showModal ? <Modal /> : null}
-      <div className="homepage__dogs">{dogsArr}</div>
+      {dogs.length !== 0 ? (
+        <div className="homepage__dogs">{dogsArr}</div>
+      ) : (
+        <Spinner />
+      )}
     </section>
   );
 };
