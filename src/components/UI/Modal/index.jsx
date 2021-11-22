@@ -32,6 +32,7 @@ export const Modal = () => {
       <div className="modal">
         <div className="content">
           {dogPhoto ? <img src={dogPhoto} alt="Random dog img" /> : <Spinner />}
+          <h1>{modalTitle.charAt(0).toUpperCase() + modalTitle.slice(1)}</h1>
         </div>
         <footer>
           <div>

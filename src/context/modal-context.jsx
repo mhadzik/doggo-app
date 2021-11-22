@@ -19,9 +19,15 @@ export default (props) => {
   const setTitle = (value) => {
     setTitleState(value);
   };
+
   return (
     <ModalContext.Provider
-      value={{ visible: visible, setVisibility: setVisibility, title: title, setTitle: setTitle }}
+      value={{
+        visible: visible,
+        setVisibility: setVisibility,
+        title: title,
+        setTitle: setTitle,
+      }}
     >
       {props.children}
     </ModalContext.Provider>
