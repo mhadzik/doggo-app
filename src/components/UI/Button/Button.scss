@@ -2,8 +2,8 @@ button,
 a {
   font: inherit;
   font-size: 0.8rem;
-  border: 1px solid #cf0056;
-  background: #cf0056;
+  border: 1px solid #279bfa;
+  background: #279bfa;
   padding: 0.5rem 0.4rem;
   color: white;
   border-radius: 5px;
@@ -18,8 +18,8 @@ button:hover,
 button:active,
 a:hover,
 a:active {
-  background: #e40763;
-  border-color: #e40763;
+  background: #279bfa;
+  border-color: #279bfa;
   box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
 }
 button:disabled,

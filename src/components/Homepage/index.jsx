@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./Homepage.scss";
-import getAllDogs from "../../utility/Axios";
+import { getAllDogs } from "../../utility/API/Axios";
 import { DogCard } from "../DogCard";
 import { Modal } from "../UI/Modal";
 import { ModalContext } from "../../context/modal-context";
